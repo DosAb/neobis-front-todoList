@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>What's up, Me</h1>
-    <h2>Create TODO</h2>
-    <form>
-    </form>
-    
-    <form>
-        <label for="task">What's on your todo list</label><br/>
-        <input type='text' name="task" id="task" placeholder='e.g get a milf' /><br />
-        <input type="radio" id="html" name="fav_language" value="HTML">
-        <label for="html">HTML</label><br>
-        <input type="radio" id="css" name="fav_language" value="CSS">
-        <label for="css">CSS</label><br>
-        <input type="submit" value="Submit">
-    </form>
+    <main>
+        <input class="title" type='text' value="my name is heisenberg" name="task" id="task" /><br />
+        <h2>Create TODO</h2>
+        <form class="todo-form">
+            <label for="task">What's on your todo list</label><br/>
+            <input type='text' name="task" id="task" placeholder='e.g get a milf' /><br />
 
+            <div class="category">
+                <div class="category__block">
+                    <input type="radio" id="business" name="category" value="Business">
+                    <label for="business">Business</label>
+                </div>
+                <div class="category__block">
+                    <input type="radio" id="personal" name="category" value="Personal">
+                    <label for="personal">Personal</label>
+                </div>
+            </div>
+
+            <input type="submit" id="submit__btn" value="Submit">
+        </form>
+        <!-- <div class="task">
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        </div> -->
+    </main>
+    <script src="./main.js" />
 </body>
 </html>
