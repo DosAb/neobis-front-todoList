@@ -94,6 +94,9 @@ label{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+
+    cursor: pointer;
+
     border-radius: 50%;
     width: 32px;
     height: 32px;
@@ -109,7 +112,7 @@ label{
     background-color: #d1d1c2;
 }
 .category__block input:checked {
-    border: 4px solid black;
+    border: 8px solid black;
 }
 
 /* BTN SUBMIT */
@@ -122,4 +125,14 @@ label{
     width: 100%;
     background: #2B2D23;
     color: #FEFAE0;
+}
+
+.task-container{
+    margin: 20px 0;
+}
+
+.task-container input{
+    font-size: 1.5rem;
+    padding: 16px 16px;
+    width: 100%;
 }

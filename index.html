@@ -8,7 +8,7 @@
 </head>
 <body>
     <main>
-        <input class="title" type='text' value="my name is heisenberg" name="task" id="task" /><br />
+        <input class="title" type='text' value="my name is heisenberg" name="title" id="title" /><br />
         <h2>Create TODO</h2>
         <form class="todo-form">
             <label for="task">What's on your todo list</label><br/>
@@ -27,9 +27,11 @@
 
             <input type="submit" id="submit__btn" value="Submit">
         </form>
-        <!-- <div class="task">
-            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-        </div> -->
+        <div class="tasks">
+            <div class="task-container">
+                <input class="task-result" type='text' value="my name is heisenberg" name="task-result" id="task-result" />
+            </div>
+        </div>
     </main>
     <script src="./main.js" />
 </body>
