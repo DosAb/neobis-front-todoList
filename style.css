@@ -37,6 +37,7 @@ main{
     text-transform: capitalize;
     background: none;
     color: #2B2D23;
+    width: 100%;
 }
 
 .title:focus{
@@ -127,12 +128,66 @@ label{
     color: #FEFAE0;
 }
 
+/* COMPLETE TASK */
+
+
 .task-container{
     margin: 20px 0;
+    display: flex;
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 8px 16px;
 }
 
-.task-container input{
+.task-complete{
+    width: auto;
+}
+
+.task-result{
     font-size: 1.5rem;
     padding: 16px 16px;
     width: 100%;
+    background: none;
+}
+
+.task-result:focus{
+    border: none;
+    outline: none;
+}
+
+.task-container button{
+    background: #2B2D23;
+    color: #FEFAE0;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 8px 32px;
+}
+
+.edit{
+    background: #FAEDCD !important;
+    color: #000 !important;
+    margin: 0 10px;
+}
+
+.task-complete{
+    
+    margin: auto 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+    padding: 10px;
+  
+    border: 1px solid #2B2D23;
+    transition: 0.2s all linear;
+    outline: none;
+
+    background-color: #d1d1c2;
+}
+
+.task-complete:checked {
+    background: #2B2D23;
 }
