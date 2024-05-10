@@ -1,13 +1,9 @@
 const submitBtn = document.querySelector('#submit__btn')
-const editBtn = document.querySelector('.edit')
-const deleteBtn = document.querySelector('.delete')
-const completeInput = document.querySelector('.task-complete')
+
+
 
 const tasks = document.querySelector('.tasks')
-const taskInputResult = document.querySelector('.task-result')
-
 const task = document.querySelector('#task')
-// const submitBtn = document.querySelector('#submit__btn')
 
 
 submitBtn.addEventListener('click', (event)=>{
@@ -22,6 +18,9 @@ submitBtn.addEventListener('click', (event)=>{
         input.value = task.value
         input.disabled = true
 
+        const category = document.querySelector('input[name="category"]:checked').value
+        console.log(category)
+
         // const taskEditBtn = editBtn.cloneNode('true')
         const taskEditBtn = document.createElement('button')
         taskEditBtn.className = 'edit'
@@ -32,6 +31,7 @@ submitBtn.addEventListener('click', (event)=>{
         const taskCompleteBtn = document.createElement('input')
         taskCompleteBtn.type = 'checkbox'
         taskCompleteBtn.className = 'task-complete'
+        category == 'business' ? taskCompleteBtn.style.background = '#00FDDC' : taskCompleteBtn.style.background = '#FF5666'
         // const taskDeleteBtn = deleteBtn.cloneNode('true')
         // const taskCompleteBtn = completeInput.cloneNode('true')
 
@@ -49,10 +49,7 @@ submitBtn.addEventListener('click', (event)=>{
         })
 
         taskCompleteBtn.addEventListener('click', (event)=>{
-            event.target.checked == true ? input.style.textDecoration = 'line-through' : input.style.textDecoration = 'none'
-            console.log(event)
-            
-            // taskNew.remove()
+            event.target.checked == true ? input.style.textDecoration = 'line-through' : input.style.textDecoration = 'none'            
         })
 
         taskNew.prepend(taskCompleteBtn)
@@ -66,10 +63,5 @@ submitBtn.addEventListener('click', (event)=>{
         alert('write task')
     }
 
-})
-
-editBtn.addEventListener('click', (event)=>{
-    event.preventDefault()
-    taskInputResult.disabled = false
 })
 

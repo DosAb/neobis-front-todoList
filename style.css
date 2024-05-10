@@ -30,6 +30,15 @@ main{
     color: #565751;
 }
 
+.title__text{
+    font-size: 4rem;
+    font-family: 'Dream Home';
+    text-transform: capitalize;
+    color: #2B2D23;
+    font-weight: 300;
+    display: inline;
+}
+
 .title{
     border: none;
     font-size: 4rem;
@@ -37,7 +46,7 @@ main{
     text-transform: capitalize;
     background: none;
     color: #2B2D23;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .title:focus{
@@ -102,7 +111,7 @@ label{
     width: 32px;
     height: 32px;
   
-    border: 1px solid #2B2D23;
+    border: 2px solid #2B2D23;
     transition: 0.2s all linear;
     outline: none;
 
@@ -110,11 +119,18 @@ label{
     left: 50%;
     transform: translateX(-50%);
 
-    background-color: #d1d1c2;
+    background-color: #00FDDC;
 }
 .category__block input:checked {
     border: 8px solid black;
 }
+
+
+.personal-radio{
+    background-color: #FF5666 !important;
+}
+
+
 
 /* BTN SUBMIT */
 
@@ -188,5 +204,5 @@ label{
 }
 
 .task-complete:checked {
-    background: #2B2D23;
+    background: #2B2D23 !important;
 }
