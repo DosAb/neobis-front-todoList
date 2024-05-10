@@ -1,6 +1,7 @@
 const submitBtn = document.querySelector('#submit__btn')
 const editBtn = document.querySelector('.edit')
 const deleteBtn = document.querySelector('.delete')
+const completeInput = document.querySelector('.task-complete')
 
 const tasks = document.querySelector('.tasks')
 const taskInputResult = document.querySelector('.task-result')
@@ -21,8 +22,18 @@ submitBtn.addEventListener('click', (event)=>{
         input.value = task.value
         input.disabled = true
 
-        const taskEditBtn = editBtn.cloneNode('true')
-        const taskDeleteBtn = deleteBtn.cloneNode('true')
+        // const taskEditBtn = editBtn.cloneNode('true')
+        const taskEditBtn = document.createElement('button')
+        taskEditBtn.className = 'edit'
+        taskEditBtn.textContent = 'edit'
+        const taskDeleteBtn = document.createElement('button')
+        taskDeleteBtn.className = 'delete'
+        taskDeleteBtn.textContent = 'delete'
+        const taskCompleteBtn = document.createElement('input')
+        taskCompleteBtn.type = 'checkbox'
+        taskCompleteBtn.className = 'task-complete'
+        // const taskDeleteBtn = deleteBtn.cloneNode('true')
+        // const taskCompleteBtn = completeInput.cloneNode('true')
 
 
         //Edit Button
@@ -37,6 +48,14 @@ submitBtn.addEventListener('click', (event)=>{
             taskNew.remove()
         })
 
+        taskCompleteBtn.addEventListener('click', (event)=>{
+            event.target.checked == true ? input.style.textDecoration = 'line-through' : input.style.textDecoration = 'none'
+            console.log(event)
+            
+            // taskNew.remove()
+        })
+
+        taskNew.prepend(taskCompleteBtn)
         taskNew.appendChild(input)
         taskNew.appendChild(taskEditBtn)
         taskNew.appendChild(taskDeleteBtn)
