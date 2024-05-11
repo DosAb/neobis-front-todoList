@@ -57,7 +57,6 @@ submitBtn.addEventListener('click', (event)=>{
         })
 
         taskCompleteBtn.addEventListener('click', (event)=>{
-            event.preventDefault()
             event.target.checked == true ? input.style.textDecoration = 'line-through' : input.style.textDecoration = 'none'            
         })
 
