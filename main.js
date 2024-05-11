@@ -18,10 +18,9 @@ submitBtn.addEventListener('click', (event)=>{
         input.value = task.value
         input.disabled = true
 
-        const category = document.querySelector('input[name="category"]:checked').value
-        console.log(category)
-
         // const taskEditBtn = editBtn.cloneNode('true')
+
+        //Add 
         const taskEditBtn = document.createElement('button')
         taskEditBtn.className = 'edit'
         taskEditBtn.textContent = 'edit'
@@ -31,9 +30,18 @@ submitBtn.addEventListener('click', (event)=>{
         const taskCompleteBtn = document.createElement('input')
         taskCompleteBtn.type = 'checkbox'
         taskCompleteBtn.className = 'task-complete'
-        category == 'business' ? taskCompleteBtn.style.background = '#00FDDC' : taskCompleteBtn.style.background = '#FF5666'
-        // const taskDeleteBtn = deleteBtn.cloneNode('true')
-        // const taskCompleteBtn = completeInput.cloneNode('true')
+
+        //Add checkbox variation
+        const category = document.querySelector('input[name="category"]:checked').value
+        if(category == 'business')
+        {
+            taskCompleteBtn.style.boxShadow = 'inset 0px 0px 2px 2px var(--btn-color-blue)'
+            taskCompleteBtn.classList.add('checkbox-blue')
+        }else{
+            taskCompleteBtn.style.boxShadow = 'inset 0px 0px 2px 2px var(--btn-color-pink)'
+            taskCompleteBtn.classList.add('checkbox-pink')
+        }
+        // category == 'business' ? taskCompleteBtn.style.boxShadow = 'inset 0px 0px 2px 2px var(--btn-color-blue)' : taskCompleteBtn.style.boxShadow = 'inset 0px 0px 2px 2px var(--btn-color-pink)'
 
 
         //Edit Button
