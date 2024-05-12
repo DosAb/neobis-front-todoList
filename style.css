@@ -85,12 +85,15 @@ label{
 
 
 /* CATEGORY */
+
+
 .category{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    margin-top: 20px;
 }
 
 .category__block{
@@ -192,7 +195,7 @@ label{
 }
 
 .task-container button{
-    background: #2B2D23;
+
     color: #FEFAE0;
     border-radius: 10px;
     cursor: pointer;
@@ -200,9 +203,13 @@ label{
 }
 
 .edit{
-    background: var(--btn-color-pink) !important;
+    background: #FF2F58;
     color: #ffffff !important;
     margin: 0 10px;
+}
+
+.delete{
+    background: #2B2D23;
 }
 
 .task-complete{
